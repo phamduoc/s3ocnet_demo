@@ -1,8 +1,8 @@
 import torch
 
 config = {
-    "batch_size": 64,
-    "num_epochs": 5,
+    "batch_size": 128,
+    "num_epochs": 200,
     "learning_rate": 1e-3,
     "num_clusters": 10,  # CIFAR-10
     "backbone": "resnet18",
