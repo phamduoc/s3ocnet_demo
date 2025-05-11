@@ -1,4 +1,5 @@
 import torch
+import os
 import torch.nn as nn
 import torch.optim as optim
 from config import config
@@ -8,6 +9,7 @@ from models.soch_head import SOCHHead
 
 
 def train():
+    os.makedirs(os.path.dirname(config["model_path"]), exist_ok=True)
     device = config["device"]
     train_loader, _ = get_cifar10_loaders(config["batch_size"])
 
